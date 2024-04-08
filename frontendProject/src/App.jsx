@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Login from "./login/login";
-import Register from "./service/register/register";
+import Register from "./register/register";
 
 function App() {
   const token = sessionStorage.getItem("token");
