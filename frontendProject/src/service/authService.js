@@ -14,25 +14,3 @@ async function authenticate(credentials) {
 }
 
 export { authenticate };
-
-async function registerUser(userData) {
-  try {
-    const response = await sendData(
-      "http://localhost:5000/auth/register",
-      userData
-    );
-
-    if (response.ok) {
-      const data = await response.json();
-      return { success: true, message: "Registration successful" };
-    } else {
-      const errorData = await response.json();
-      return { success: false, message: errorData.err };
-    }
-  } catch (error) {
-    console.error("Error registering user:", error);
-    return { success: false, message: "Internal server error" };
-  }
-}
-
-export { registerUser };
