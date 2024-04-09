@@ -3,6 +3,7 @@ import "./App.css";
 import Login from "./login/login";
 import FirstPage from "./firstPage/FirstPage";
 import Register from "./register/register";
+import SelectRoms from "./selectRoms/selectRoms";
 
 function App() {
   const token = sessionStorage.getItem("token");
@@ -18,6 +19,7 @@ function App() {
               element={token ? alert("välkommen") : <Login />}
             />
             <Route path="/register" element={<Register />} />
+            <Route path="/selectRoms" element={<SelectRoms />} />
           </Routes>
         </main>
       </Router>

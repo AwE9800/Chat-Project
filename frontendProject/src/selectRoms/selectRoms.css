@@ -1,0 +1,146 @@
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 3rem;
+  font-family: sans-serif;
+  background-color: rgb(3, 42, 83);
+}
+
+#username-form {
+  flex-grow: 1;
+  border: none;
+}
+
+#username-input {
+  margin-right: 10px;
+  background-color: white;
+  color: #066b80;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 16px;
+  flex-grow: 2;
+}
+#username-input:focus {
+  outline: none;
+}
+
+#room-select {
+  margin-right: 10px;
+  background-color: #066b80;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  flex-grow: 1;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#join-button {
+  flex-grow: 1;
+  background-color: #066b80;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.55rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#chat-room {
+  display: none;
+}
+
+#messages {
+  height: 30vh;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border-radius: 0.5rem;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+#messages > li {
+  padding: 10px;
+  margin-bottom: 5px;
+  color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #f2f2f2;
+  margin-right: 0.5rem;
+}
+
+#messages > li:nth-child(odd) {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+h1 {
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.StyleInput {
+  margin-block: 0.8rem;
+  background-color: white;
+  color: #066b80;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 16px;
+  flex-grow: 2;
+}
+.buttonInput {
+  flex-grow: 2;
+  background-color: #066b80;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.55rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-inline: 0.5rem;
+}
+
+.effectOne {
+  top: 4rem;
+  left: 15rem;
+  right: 5rem;
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  border-radius: 50%;
+  background-color: orange;
+  z-index: -2;
+}
+
+.effectTwo {
+  top: 5rem;
+  left: 18rem;
+  right: 5rem;
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  border-radius: 50%;
+  background-color: rgb(3, 42, 83);
+  z-index: -1;
+}
