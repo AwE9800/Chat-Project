@@ -14,7 +14,7 @@ const Register = () => {
     try {
       const resp = await register({ username, email, password });
       if (resp.registered) {
-        window.location.href = "/register";
+        window.location.href = "/login";
       } else {
         setError("Registreringen misslyckades. Var god försök igen.");
       }
