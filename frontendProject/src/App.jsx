@@ -15,10 +15,7 @@ function App() {
               path="/login"
               element={token ? alert("välkommen") : <Login />}
             />
-            <Route
-              path="/register"
-              element={token ? alert("du är nu registrerad") : <Register />}
-            />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </main>
       </Router>
