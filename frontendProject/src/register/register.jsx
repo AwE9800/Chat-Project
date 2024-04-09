@@ -16,7 +16,7 @@ const Register = () => {
       if (resp.registered) {
         window.location.href = "/login";
       } else {
-        setError("Registreringen misslyckades. Var god försök igen.");
+        setError("Registreringen misslyckades. försök igen.");
       }
     } catch (error) {
       console.error("Registreringsfel:", error);
