@@ -7,7 +7,7 @@
     gap: 1rem;
 }
 
-form {
+.formLogin {
     width: 25rem;
     padding: 1.25rem;
     padding-block: 2rem;
@@ -16,12 +16,12 @@ form {
     background-color: #f9f9f9;
 }
 
-form label {
+.formLogin > label {
     display: block;
     margin-bottom: 0.625rem;
 }
 
-form input {
+.formLogin > input {
     width: 100%;
     padding: 0.625rem;
     margin-bottom: 0.9375rem;
@@ -35,7 +35,7 @@ form input {
     margin-top: 2rem;
 }
 
-button[type='submit'],
+.login,
 .register-button {
     flex: 1;
     padding: 0.625rem;
@@ -44,7 +44,7 @@ button[type='submit'],
     cursor: pointer;
 }
 
-button[type='submit'] {
+.login {
     background-color: #007bff;
     color: #fff;
 }
@@ -54,7 +54,7 @@ button[type='submit'] {
     color: #fff;
 }
 
-button[type='submit']:hover,
+.login:hover,
 .register-button:hover {
     background-color: #0056b3;
 }
