@@ -5,6 +5,7 @@ import FirstPage from './firstPage/FirstPage';
 import Register from './register/register';
 import ChatPage from './chattCenter/ChatCenter';
 
+
 function App() {
     const token = sessionStorage.getItem('token');
 
@@ -22,6 +23,7 @@ function App() {
             </Router>
         </>
     );
+ 
 }
 
 export default App;
