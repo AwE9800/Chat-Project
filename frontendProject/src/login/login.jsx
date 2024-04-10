@@ -13,7 +13,7 @@ const Login = () => {
         try {
             const resp = await authenticate({ email, password });
             if (resp.authenticated) {
-                window.location.href = '/menu';
+                window.location.href = '/chattCenter';
             } else {
                 setError('Felaktiga inloggningsuppgifter');
             }
@@ -25,7 +25,7 @@ const Login = () => {
 
     return (
         <section className="login-container">
-            <form onSubmit={handleSubmit}>
+            <form className="formLogin" onSubmit={handleSubmit}>
                 <h2>Logga in</h2>
                 <label htmlFor="ePost">E-postadress</label>
                 <input type="text" name="ePost" value={email} onChange={e => setEmail(e.target.value)} />
@@ -33,7 +33,9 @@ const Login = () => {
                 <input type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} />
                 {error && <div className="error">{error}</div>}
                 <div className="button-container">
-                    <button type="submit">Logga in</button>
+                    <button className="login" type="submit">
+                        Logga in
+                    </button>
                     <button type="button" className="register-button">
                         Registrera
                     </button>

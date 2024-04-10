@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchBroadcastMessages, sendBroadcastMessage } from '../service/chatService';
+
 import './firstPage.css';
 
 function FirstPage() {
@@ -29,21 +30,35 @@ function FirstPage() {
         }
     };
 
+    const handleLogin = () => {
+        window.location.href = '/login';
+    };
+
+    const handleRegister = () => {
+        window.location.href = '/register';
+    };
+
     return (
         <div className="container">
+            <div className="account-container">
+                <button onClick={handleLogin}>Log In</button>
+                <button onClick={handleRegister}>Register</button>
+            </div>
             <h1 className="title">Broadcast Messages</h1>
-            <ul className="message-list">
-                {broadcastMessages.length > 0 ? (
-                    broadcastMessages.map((message, index) => (
-                        <li key={index} className="message">
-                            <p className="message-content">{message.content}</p>
-                            <p className="message-timestamp">{message.timestamp}</p>
-                        </li>
-                    ))
-                ) : (
-                    <li className="no-message">No broadcast messages available</li>
-                )}
-            </ul>
+            <div className="message-list-container">
+                <ul className="message-list">
+                    {broadcastMessages.length > 0 ? (
+                        broadcastMessages.map((message, index) => (
+                            <li key={index} className="message">
+                                <p className="message-content">{message.content}</p>
+                                <p className="message-timestamp">{message.timestamp}</p>
+                            </li>
+                        ))
+                    ) : (
+                        <li className="no-message">No broadcast messages available</li>
+                    )}
+                </ul>
+            </div>
             <div className="message-input">
                 <input
                     type="text"
