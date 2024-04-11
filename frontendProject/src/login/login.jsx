@@ -23,6 +23,10 @@ const Login = () => {
         }
     };
 
+    const handleRegister = () => {
+        window.location.href = '/register';
+    };
+
     return (
         <section className="login-container">
             <form className="formLogin" onSubmit={handleSubmit}>
@@ -36,7 +40,7 @@ const Login = () => {
                     <button className="login" type="submit">
                         Logga in
                     </button>
-                    <button type="button" className="register-button">
+                    <button type="button" onClick={handleRegister} className="register-button">
                         Registrera
                     </button>
                 </div>
